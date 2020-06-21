@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
+    "build:prod": "ng build --prod --aot --build-optimizer",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "deploy": "npm run build:prod && firebase deploy",
     "postinstall": "ng build --aot --prod"
   },
   "private": true,
