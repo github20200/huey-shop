@@ -10,14 +10,14 @@ export class UserService {
   constructor(private db: AngularFireDatabase) { }
 
   add(user: firebase.User) {
-    this.db.object('/user/' + user.uid).update({
+    this.db.object('/users/' + user.uid).update({
       name: user.displayName,
       email: user.email
     });
   }
 
   get(uid: string) {
-    return this.db.object('/user/' + uid) as Observable<IAppUser>;
+    return this.db.object('/users/' + uid) as Observable<IAppUser>;
   }
 
 }

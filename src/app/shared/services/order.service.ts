@@ -10,30 +10,30 @@ export class OrderService {
     private cartService: ShoppingCartService) { }
 
   async placeOrder(order: Order) {
-    let result = await this.db.list('/order').push(order);
+    let result = await this.db.list('/orders').push(order);
     this.cartService.clearAllCart();
     return result;
   }
 
   getAllOrders() {
-    return this.db.list('/order');
+    return this.db.list('/orders');
   }
 
   getOrderByUser(userId: string) {
-    return this.db.list('/order', {
+    return this.db.list('/orders', {
       query: {
-        orderByChild: 'user/userId',
+        orderByChild: 'users/userId',
         equalTo: userId
       }
     });
   }
 
   getOrderById(orderId: string) {
-    return this.db.object('/order/' + orderId);
+    return this.db.object('/orders/' + orderId);
   }
 
   deleteById(orderId: string) {
-    return this.db.object('/order' + orderId).remove();
+    return this.db.object('/orders' + orderId).remove();
   }
 
 
