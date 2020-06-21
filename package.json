@@ -1,7 +1,6 @@
 {
   "name": "hueyshop",
   "version": "0.0.0",
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
