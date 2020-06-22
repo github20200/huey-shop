@@ -22,7 +22,7 @@ export class OrderService {
   getOrderByUser(userId: string) {
     return this.db.list('/orders', {
       query: {
-        orderByChild: 'users/userId',
+        orderByChild: 'user/userId',
         equalTo: userId
       }
     });
