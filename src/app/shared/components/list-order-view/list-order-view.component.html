@@ -12,7 +12,7 @@
         <tr *ngFor="let order of orders">
           <td>{{order.user.username}}</td>
           <td>{{order.datePlaced | date}}</td>
-          <td><a [routerLink]="['/orders-details', order.$key]">View</a></td>
+          <td><a [routerLink]="['/order-details', order.$key]">View</a></td>
           <td> 
             <button type="button" (click)="delete()" class="btn btn-danger" *ngIf="order.$key">Remove Order</button>
           </td>
