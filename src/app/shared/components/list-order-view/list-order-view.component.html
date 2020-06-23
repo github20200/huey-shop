@@ -10,9 +10,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let order of orders">
-          <td>{{order.user.username}}</td>
-          <td>{{order.datePlaced | date}}</td>
-          <td><a [routerLink]="['/order-details', order.$key]">View</a></td>
+          <td><a class="btn btn primary">{{order.user.username}}</a></td>
+          <td><a class="btn btn primary">{{order.datePlaced | date}}</a></td>
+          <td><a [routerLink]="['/order-details', order.$key]" class="btn btn primary">View</a></td>
           <td> 
             <button type="button" (click)="delete(order.$key)" class="btn btn-danger">Remove Order</button>
           </td>
