@@ -33,7 +33,7 @@ export class OrderService {
   }
 
   deleteById(orderId: string) {
-    return this.db.object('/orders' + orderId).remove();
+    return this.db.object('/orders/' + orderId).remove();
   }
 
 
