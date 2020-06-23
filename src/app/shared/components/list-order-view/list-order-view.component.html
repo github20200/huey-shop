@@ -14,7 +14,7 @@
           <td>{{order.datePlaced | date}}</td>
           <td><a [routerLink]="['/order-details', order.$key]">View</a></td>
           <td> 
-            <button type="button" (click)="delete()" class="btn btn-danger" *ngIf="order.$key">Remove Order</button>
+            <button type="button" (click)="delete(order.$key)" class="btn btn-danger">Remove Order</button>
           </td>
         </tr>
       </tbody>

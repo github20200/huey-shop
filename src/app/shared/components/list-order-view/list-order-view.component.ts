@@ -20,11 +20,11 @@ export class ListOrderViewComponent implements OnInit {
 
   ngOnInit() {
   }
-  delete() {
+  delete(orderId: string) {
     if (confirm('Are you sure?')) {
-      if (this.orderId) {
-        this.orderService.deleteById(this.orderId);
-        this.router.navigateByUrl("orders");
+      if (orderId) {
+        this.orderService.deleteById(orderId);
+        this.router.navigateByUrl('/orders/' + orderId);
       }
     }
   }
