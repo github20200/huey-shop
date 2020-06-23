@@ -24,7 +24,6 @@ export class ListOrderViewComponent implements OnInit {
     if (confirm('Are you sure?')) {
       if (orderId) {
         this.orderService.deleteById(orderId);
-        this.router.navigateByUrl('/orders/' + orderId);
       }
     }
   }

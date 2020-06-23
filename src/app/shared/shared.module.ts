@@ -24,7 +24,9 @@ import { SizeService } from './services/size.service';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule.forChild([
+      { path: 'orders/:orderId', component: ListOrderViewComponent, canActivate: [AuthGuardService] }
+    ]),
     FormsModule,
     CustomFormsModule,
     DataTableModule,
