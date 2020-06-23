@@ -17,6 +17,7 @@ export class ShippingFormComponent implements OnInit, OnDestroy {
   disableBtn: boolean;
   userId: string;
   userName: string;
+  Email: string;
   userSubscription: Subscription;
 
 
@@ -30,6 +31,7 @@ export class ShippingFormComponent implements OnInit, OnDestroy {
       .subscribe(user => {
         this.userId = user.uid;
         this.userName = user.displayName || user.email;
+        this.Email = user.email;
       });
   }
 
@@ -39,7 +41,7 @@ export class ShippingFormComponent implements OnInit, OnDestroy {
 
   save(shipping) {
 
-    let order = new Order(this.userId, this.userName, shipping, this.carts);
+    let order = new Order(this.userId, this.userName,this.Email, shipping, this.carts);
 
     this.orderService.placeOrder(order)
       .then(ref => {

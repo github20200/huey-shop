@@ -6,10 +6,11 @@ export class Order {
   netPrice: number;
   user: {
     username: string,
-    userId: string
+    userId: string,
+    email: string
   };
 
-  constructor(userId, userName,
+  constructor(userId, userName,Email,
     public shipping: any, carts: ShoppingCart) {
 
     this.datePlaced = new Date().getTime();
@@ -29,7 +30,8 @@ export class Order {
 
     this.user = {
       userId: userId,
-      username: userName
+      username: userName,
+      email: Email
     };
     this.netPrice = carts.totalPrice;
 
