@@ -1,5 +1,5 @@
 ## huey-shop
-### Built with Angular and Heroku
+### Built with Angular
 
 #### Project link: [Huey-Shop](https://huey-shop.herokuapp.com/)
 
