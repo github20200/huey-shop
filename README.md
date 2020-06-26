@@ -68,3 +68,4 @@
     - shopping-cart: shows the number of items in cart, a button to clear the shopping cart, a table with item, image, quantity and total price. And a button to place order.
     - shopping-cart-summary: order summary of the number of items in shopping cart, item quantity and item title, total price
 
+# huey-shop
