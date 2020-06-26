@@ -1,9 +1,6 @@
 {
   "rules": {
     ".read": true,
-    ".write": true,
-    "orders" : {
-      ".indexOn": "user/userId"
-  }
+    ".write": true
   }
 }
