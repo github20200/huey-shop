@@ -15,7 +15,7 @@ export class AppComponent {
       if (user) {
         userService.add(user);
         let returnUrl = route.snapshot.queryParamMap.get('returnUrl');
-        if (returnUrl || router.url === '/login' || router.url === '/phone-login' || router.url === '/register')  {
+        if (returnUrl || router.url === '/login' || router.url === '/phone-login' || router.url === '/register' || router.url === './forgotpassword')  {
           router.navigate([returnUrl || '/']);
          
         }
