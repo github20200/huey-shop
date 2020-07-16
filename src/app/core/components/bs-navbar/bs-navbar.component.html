@@ -30,7 +30,7 @@
         </ng-template>
 
         <li *ngIf="appUser; else notLoggedInUser" ngbDropdown class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>{{appUser.name || appUser.email}}</a>
+          <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>{{appUser.name || appUser.email || appUser.phone}}</a>
           <div ngbDropdownMenu (click)="navbarCollapsed = false" class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" [routerLink]="['myorders']">My Orders</a>
             <ng-container *ngIf="appUser.isAdmin">
