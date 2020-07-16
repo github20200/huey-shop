@@ -36,6 +36,7 @@
     "handlebars": ">=4.3.0",
     "hoek": ">=4.2.1",
     "https-proxy-agent": ">=2.2.3",
+    "lodash": "^4.17.19",
     "mem": ">=4.0.0",
     "minimist": ">=0.2.1",
     "ng2-validation": "^4.2.0",
