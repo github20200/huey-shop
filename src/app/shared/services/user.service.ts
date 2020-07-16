@@ -12,7 +12,8 @@ export class UserService {
   add(user: firebase.User) {
     this.db.object('/users/' + user.uid).update({
       name: user.displayName,
-      email: user.email
+      email: user.email,
+      displayName: user.displayName
     });
   }
 
