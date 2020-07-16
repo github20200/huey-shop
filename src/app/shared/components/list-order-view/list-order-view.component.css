@@ -1,0 +1,9 @@
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 50vmax;
+    padding: 0;
+  }
+
+ 

@@ -1,24 +1,28 @@
-<ng-container *ngIf="order$ | async as orders">
-  <ng-container *ngIf="orders.length > 0; else noOrder">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Customer</th>
-          <th>Date</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let order of orders">
-          <td><a class="btn btn primary">{{order.user.username}}</a></td>
-          <td><a class="btn btn primary">{{order.datePlaced | date}}</a></td>
-          <td><a [routerLink]="['/order-details', order.$key]" class="btn btn primary">View</a></td>
-          <td> 
-            <button type="button" (click)="delete(order.$key)" class="btn btn-danger">Remove Order</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </ng-container>
-  <ng-template #noOrder>No Order so far.</ng-template>
-</ng-container>
+<body class="flex flex-column">
+  
+  <div *ngIf="order$ | async as orders">
+    <div *ngIf="orders.length > 0; else noOrder">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Detail</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td><a class="btn btn primary">{{order.user.username}}</a></td>
+            <td><a class="btn btn primary">{{order.datePlaced | date}}</a></td>
+            <td><a [routerLink]="['/order-details', order.$key]" class="btn btn primary">View</a></td>
+            <td> 
+              <button type="button" (click)="delete(order.$key)" class="btn btn-danger">Remove Order</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noOrder>No Order so far.</ng-template>
+  </div>
+  </body>

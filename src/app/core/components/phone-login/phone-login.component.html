@@ -1,0 +1,66 @@
+<body>
+  <div class="container">
+    <div class="row">
+     <div class="col-md-5 mx-auto">
+      <div class="myform form ">
+        <div class="logo mb-3">
+           <div class="col-md-12 text-center">
+             <h1>Login with Phone</h1>
+           </div>
+       </div>
+          <div [hidden]="user">
+
+            <p class="col-md-12 mb-3 text-center">Please enter a valid phone number.</p>
+            <div class="col-md-12 ">
+              <div class="login-or">
+                <hr class="hr-or">
+                <span class="span-or"></span>
+              </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p class="text-center">
+            <input type="text" [(ngModel)]="phoneNumber.country"  class="input" placeholder="84"    maxlength="2">
+            <input type="text" [(ngModel)]="phoneNumber.area"     class="input" placeholder="935"  maxlength="3">
+            <input type="text" [(ngModel)]="phoneNumber.prefix"   class="input" placeholder="999"  maxlength="3">
+            <input type="text" [(ngModel)]="phoneNumber.line"     class="input" placeholder="999" maxlength="4">
+          </p> 
+          </div>
+          <div class="col-md-12 mb-3">
+            <hr><div class="text-center" id="recaptcha-container"></div><hr>
+            <div class="col-md-12 mb-3 text-center">
+              <button class="btn btn-block mybtn btn-primary tx-tfm" (click)="sendLoginCode()">Comfirm</button>
+            </div>
+            
+            <div class="text-center" *ngIf="windowRef.confirmationResult">
+              <hr>
+              <label class="text-center" for="code">Enter your Verification Code Here</label><br>
+              <hr>
+              <input type="text" name="code" [(ngModel)]="verificationCode" class="input">
+              <hr>
+              <div class="col-md-12 mb-3">
+              <button class=" btn btn-block mybtn btn-primary tx-tfm" routerLink="/" (click)="verifyLoginCode()">Verify</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <p class="text-center">Already have an account? <a routerLink="/login" href="#" id="signup">Login</a></p>
+           </div>
+          </div>
+          </div>
+      </div>
+     </div>
+    </div>
+  </div>
+</body>      
+<!-- <div *ngIf="user">
+
+  <div class="notification is-success">You have successfully logged in with your phone number!</div>
+
+  UserId: {{ user?.uid }}
+
+</div> -->
+
+      <!-- </div>
+     </div>
+    </div>
+  </div> -->

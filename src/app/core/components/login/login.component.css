@@ -1,41 +1,67 @@
-.btn-login {
-  height: 53px;
-  width: 250px;
-  font-size: 16px;
-}
-
-.align-center-flex {
-  height: 100%;
-  width: 100%;
+body{
+  min-height: 35vmax;
+  }
+  a{
+   text-decoration:none !important;
+   }
+   h1,h2,h3{
+   font-family: 'Kaushan Script', cursive;
+   }
+    .myform{
+  position: relative;
+  display: -ms-flexbox;
   display: flex;
-  text-align: center;
+  padding: 1rem;
+  -ms-flex-direction: column;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  justify-content: center;
-}
-
-body {
-  padding: 2em;
-}
-
-.facebook {
-  background-color: #4C69BA;
-  background-image: linear-gradient(#4C69BA, #3B55A0);
-  outline: none;
-}
-
-.facebook:hover, .facebook:focus {
-  background-color: #5B7BD5;
-  background-image: linear-gradient(#5B7BD5, #4864B1);
-}
-
-.google {
-  background: #DD4B39;
-  background-image: linear-gradient(#DD4B39, #c21a07);
-}
-
-.google:hover, .google:focus {
-  background: #E74B37;
-}
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 1.1rem;
+  outline: 0;
+  max-width: 500px;
+   }
+   .tx-tfm{
+   text-transform:uppercase;
+   }
+   .mybtn{
+   border-radius:50px;
+   }
+  
+   .login-or {
+   position: relative;
+   color: #aaa;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   }
+   .span-or {
+   display: block;
+   position: absolute;
+   left: 50%;
+   top: -2px;
+   margin-left: -25px;
+   background-color: #fff;
+   width: 50px;
+   text-align: center;
+   }
+   .hr-or {
+   height: 1px;
+   margin-top: 0px !important;
+   margin-bottom: 0px !important;
+   }
+   .google {
+   color:#666;
+   width:100%;
+   height:40px;
+   text-align:center;
+   outline:none;
+   border: 1px solid lightgrey;
+   }
+    form .error {
+   color: #ff0000;
+   }
+   #second{display:none;}

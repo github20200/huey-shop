@@ -1,132 +1,28 @@
+<div class="container text-center">
+  <h1 class="jumbotron-heading">Huey Shop</h1>
+  <p class="lead text">Enjoy your life...</p>
+  </div>
+  <div class="embed-responsive embed-responsive-16by9 mb-4">
+    <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/c0f61f71859a4d25adcfab1b00f7bf9a_d98c/Giay_ZX_4000_4D_Mau_djen_EF9625_video.mp4" allowfullscreen>
+    </video>
+  </div>
 
-  <div class="container text-center">
-    <h1 class="jumbotron-heading">Huey Shop</h1>
-    <p class="lead text">Enjoy your life...</p>
-    </div>
-    <div class="embed-responsive embed-responsive-16by9 mb-4">
-      <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/17ecc7d9bfb34b8ab10faace00fddf34_d98c/Giay_Superstar_Mau_trang_EG4958_video.mp4" allowfullscreen>
-      </video>
-    </div>
-  
 
 <div class="row">
-  <div class="col-3">
-    <product-filter [selectedCategory]="category"></product-filter>
+<div class="col-3">
+  <product-filter [selectedCategory]="category"></product-filter>
+</div>
+<div class="col">
+  <div class="row" *ngIf="cart$ | async as cart">
+    <ng-container *ngFor="let product of filteredProducts; let i = index">
+      <div class="col-6">
+        <product-card [product]="product" [shopping-cart]="cart"></product-card>
+      </div>
+      <div *ngIf="(i+1)%2 === 0" class="w-100"></div>
+    </ng-container>
   </div>
-  <div class="col">
-    <div class="row" *ngIf="cart$ | async as cart">
-      <ng-container *ngFor="let product of filteredProducts; let i = index">
-        <div class="col-6">
-          <product-card [product]="product" [shopping-cart]="cart"></product-card>
-        </div>
-        <div *ngIf="(i+1)%2 === 0" class="w-100"></div>
-      </ng-container>
-    </div>
-  </div>
-
-<!-- Footer -->
-<footer class="page-footer font-small mdb-color lighten-3 pt-4 bg-light footer">
-
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!--Grid row-->
-    <div class="row">
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-12 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/17ecc7d9bfb34b8ab10faace00fddf34_d98c/Giay_Superstar_Mau_trang_EG4958_video.mp4" allowfullscreen>
-          </video>
-          <a>
-            <div class="mask rgba-white-light" mdbWavesEffect></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/0d52401d881c45c3a547ab1b00c664d9_d98c/Giay_UltraBoost_20_Mau_djen_EG0754_video.mp4" allowfullscreen>
-          </video>
-          <a>
-            <div class="mask rgba-white-light" mdbWavesEffect></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/72f725a4fd3e40a9927aaba400aed2a2_d98c/Giay_4D_Run_1.0_LTD_Mau_trang_FW1229_video.mp4" allowfullscreen>
-          </video>          <a>
-            <div class="mask rgba-white-light" mdbWavesEffect></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-12 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/87a72d7fb3924e1fbecbab1e00b2468c_d98c/Giay_Alphaedge_4D_Mau_djen_FV6106_video.mp4" allowfullscreen>
-          </video>  
-          <a>
-            <div class="mask rgba-white-light" mdbWavesEffect></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/313fa579613d4ebea225aaff01032922_d98c/Giay_UltraBoost_20_Mau_djen_EF1043_video.mp4" allowfullscreen>
-          </video>           <a>
-            <div class="mask rgba-white-light" mdbWavesEffect></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-lg-2 col-md-6 mb-4">
-
-        <!--Image-->
-        <div class="view overlay z-depth-1-half">
-          <video class="embed-responsive-item" autoplay muted loop src="https://assets.adidas.com/videos/t_videomain/c0f61f71859a4d25adcfab1b00f7bf9a_d98c/Giay_ZX_4000_4D_Mau_djen_EF9625_video.mp4" allowfullscreen>
-          </video>           <a>
-            <div class="mask rgba-white-light" mdbWavesEffect></div>
-          </a>
-        </div>
-
-      </div>
-      <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-
-</footer>
+</div>
+</div>
 <a class="gotobtn" href="#">Top</a>
+
+

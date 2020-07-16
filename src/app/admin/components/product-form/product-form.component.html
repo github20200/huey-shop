@@ -1,3 +1,5 @@
+<body>
+  <h2>Product</h2>
 <div class="row">
   <div class="col-md-6">
     <form #productForm="ngForm" (ngSubmit)="save(productForm.value)" novalidate>
@@ -54,3 +56,4 @@
     <product-card [product]="product" [width]="22" [show-actions]="false"></product-card>
   </div>
 </div>
+</body>

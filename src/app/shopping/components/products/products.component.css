@@ -1,32 +1,37 @@
 video {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 footer {
-    background-color: yellow;
     bottom: 0;
     margin-top: 30px;
     width: 100%;
     color: white;
+    padding-bottom: 0%;
     padding-left: 15px;
     padding-right: 15px;
     height: 100%;
+  }
+  body{
+      height: 100%;
   }
 
    html {
       scroll-behavior: smooth;
   }
 
+
   .gotobtn {
-      position: fixed;
-      width: 50px;
-      height: 50px;
-      background: #27ae60;
-      bottom: 40px;
-      right: 50px;
-      text-decoration: none;
-      text-align: center;
-      line-height: 50px;
-      color: white;
-      font-size: 22px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #27ae60;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    scroll-behavior: smooth;
   }

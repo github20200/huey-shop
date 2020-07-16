@@ -20,6 +20,8 @@ import { ShoppingCartService } from './services/shopping-cart.service';
 import { UserService } from './services/user.service';
 import { SearchComponent } from './components/search/search.component';
 import { SizeService } from './services/size.service';
+import { WindowService } from './services/window.service';
+
 
 @NgModule({
   imports: [
@@ -48,7 +50,8 @@ import { SizeService } from './services/size.service';
     ProductService,
     ShoppingCartService,
     OrderService,
-    SizeService
+    SizeService,
+    WindowService
   ],
   exports : [
     CommonModule,
