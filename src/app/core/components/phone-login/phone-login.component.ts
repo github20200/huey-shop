@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WindowService } from 'shared/services/window.service';
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 
 export class PhoneNumber {
@@ -27,7 +28,8 @@ export class PhoneLoginComponent implements OnInit {
   verificationCode: string;
   user: any;
 
-  constructor(private win: WindowService,) { }
+  constructor(private win: WindowService,
+    private router: Router) { }
 
   ngOnInit() {
     this.windowRef = this.win.windowRef;
@@ -54,15 +56,20 @@ export class PhoneLoginComponent implements OnInit {
             })
           }
 
-  verifyLoginCode() {
-    this.windowRef.confirmationResult
+  async verifyLoginCode() {
+    try {
+      await this.windowRef.confirmationResult
       .confirm(this.verificationCode)
         .then( (result) => {
-         this.user = result.user
-    })
-    .catch( (error) =>{
+         this.user = result.user;
+         this.router.navigate(['/phone-login']).then(()=>{
+          window.location.reload();
+        });
+    });
+  }
+    catch (error) {
       window.alert('Something went wrong: ' + error.message);
       // console.log(error, "Incorrect code entered?");
-    }) 
+    }
   }
 }

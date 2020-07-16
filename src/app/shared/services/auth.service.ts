@@ -20,7 +20,7 @@ export class AuthService {
               public afAuth: AngularFireAuth,
               public router: Router
               ) {
-    this.user$ = afAuth.authState
+    this.user$ = afAuth.authState;
   }
 
   // login(provider: auth.AuthProvider) {
@@ -35,7 +35,7 @@ export class AuthService {
       try {
         await this.afAuth.auth.signInWithPopup(provider);
         // this.router.navigate(['/']);
-        this.router.navigate(['login']).then(()=>{
+        this.router.navigate(['/login']).then(()=>{
           window.location.reload();
         });
       }
@@ -49,7 +49,7 @@ export class AuthService {
       await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
       // this.sendEmailVerification();
       // window.alert('Please verify your email');
-      this.router.navigate(['register']).then(()=>{
+      this.router.navigate(['/register']).then(()=>{
         window.location.reload();
       });
     }
@@ -64,7 +64,7 @@ export class AuthService {
     try {
       await this.afAuth.auth.signInWithEmailAndPassword(email, password);
       // console.log('Nice, it worked!');
-      this.router.navigate(['login']).then(()=>{
+      this.router.navigate(['/login']).then(()=>{
         window.location.reload();
       });
     }
