@@ -13,7 +13,7 @@ export class AdminAuthGuardService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     return this.authService.appUser$
       .map(user => {
-        if (user.isAdmin === true) {
+        if (user.isAdmin === true || user.isSale === true) {
           return true;
         }
 

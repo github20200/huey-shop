@@ -31,7 +31,7 @@
 							 <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Password" #password required>
 						  </div>
 						  <div class="col-md-12 text-center ">
-							 <button class=" btn btn-block mybtn btn-primary tx-tfm" value="singin" (click)="authService.signin(email.value, password.value)">Login</button>
+							 <button class=" btn btn-block mybtn btn-primary tx-tfm" value="signin" id="confirm" (click)="authService.signin(email.value, password.value)">Login</button>
 						  </div>
 						  <div class="col-md-12 ">
 							 <div class="login-or">
@@ -41,19 +41,19 @@
 						  </div>
 						  <div class="col-md-12 mb-3">
 							 <p class="text-center">
-								<a href="#" routerLink="/login" class="google btn mybtn" (click)="authService.login()"><i class="fa fa-google" aria-hidden="true"></i>
+								<a href="#" routerLink="/login" id="logingg" class="google btn mybtn" (click)="authService.login()"><i class="fa fa-google" aria-hidden="true"></i>
 								  Log in with Google
 								</a>
 							 </p>
 						  </div>
 							  <div class="col-md-12 mb-3">
 							 <p class="text-center">
-								<a href="#" routerLink="/phone-login" class="google btn mybtn" id="phone"><i class="fa fa-phone" aria-hidden="true"></i>
+								<a href="#" routerLink="/phone-login" id="loginphone" class="google btn mybtn" id="phone"><i class="fa fa-phone" aria-hidden="true"></i>
 								  Log in with Phone
 								</a>
 							 </p>
 							 <div class="form-group">
-							<p class="text-center"><a routerLink="/forgotpassword" href="#" id="signup">Forgot Password?</a></p>
+							<p class="text-center"><a routerLink="/forgotpassword" href="#" id="forgotpsw">Forgot Password?</a></p>
 						  </div>
 						  </div>
 						  

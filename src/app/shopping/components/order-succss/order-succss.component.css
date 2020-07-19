@@ -17,3 +17,8 @@
   align-self: center;
   justify-content: center;
 }
+
+body {
+  height: 100vh;
+  padding: 0;
+}

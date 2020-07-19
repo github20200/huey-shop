@@ -1,7 +1,7 @@
 import { ShoppingCart } from './shopping-cart';
 export class Order {
 
-  datePlaced: number;
+  datePlaced: string;
   items: any[];
   netPrice: number;
   user: {
@@ -13,8 +13,12 @@ export class Order {
   constructor(userId, userName,Email,
     public shipping: any, carts: ShoppingCart) {
 
-    this.datePlaced = new Date().getTime();
-
+    // this.datePlaced = new Date().getTime();
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    this.datePlaced = dateTime;
     this.items = carts.items.map(item => {
       return {
         product: {

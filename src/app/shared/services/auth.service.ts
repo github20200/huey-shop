@@ -51,6 +51,11 @@ export class AuthService {
       // window.alert('Please verify your email');
       this.router.navigate(['/register']).then(()=>{
         window.location.reload();
+        firebase.database().ref('users').push({
+                
+                  email: firebase.auth().currentUser.email,
+                  password: password
+                })
       });
     }
     catch(error){

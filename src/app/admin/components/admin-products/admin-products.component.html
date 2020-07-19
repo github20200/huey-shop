@@ -5,7 +5,7 @@
   <input
   #searchQuery
   (keyup)="filter(searchQuery.value)" 
-  type="text" class="form-control" placeholder="Search...">
+  type="text" id="search" class="form-control" placeholder="Search...">
   </p>
 
 <data-table
@@ -38,7 +38,7 @@
   [property]="'$key'"
   >
     <ng-template #dataTableCell let-item="item">
-        <a [routerLink]="['/admin/products',item.$key]">Edit</a>
+        <a id="edit" [routerLink]="['/admin/products',item.$key]">Edit</a>
     </ng-template>
   </data-table-column>
 

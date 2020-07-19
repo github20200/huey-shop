@@ -3,4 +3,6 @@ export interface IAppUser {
   email: string;
   phone: string;
   isAdmin: boolean;
+  isSale: boolean;
+  isUser: boolean;
 }
